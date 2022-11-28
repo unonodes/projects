@@ -25,7 +25,6 @@ sleep 2
 
 echo -en '\n'
 echo "Скачивание бинарного файла"
-cd $HOME/tfsc/
 wget -O $HOME/tfsc/tfsc "$link_tfsc"
 sleep 10
 
