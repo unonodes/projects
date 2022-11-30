@@ -1,2 +1,5 @@
 #!/usr/bin/bash
-sudo systemctl start tfsc.service && sudo journalctl -n 100 -f -u tfsc.service
+sudo systemctl start tfsc.service
+sudo systemctl status tfsc.service
+sleep 5
+sudo journalctl -n 100 -f -u tfsc.service
