@@ -1,0 +1,19 @@
+#</home/$USER> замените на домашний каталог пользователя.
+#Как это посмотреть? Команда pwd покажет дирректорию с полным путем до нее.
+
+sudo tee <<EOF >/dev/null /etc/systemd/system/tfsc.service
+[Unit]
+Description=TFSCNode
+After=network-online.target
+
+[Service]
+User=sumos
+ExecStart=/home/$USER/tfsc/./tfsc
+WorkingDirectory=/home/$USER/tfsc
+Restart=always
+RestartSec=5
+LimitNOFILE=10000
+
+[Install]
+WantedBy=multi-user.target
+EOF
