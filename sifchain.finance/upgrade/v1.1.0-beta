@@ -1,0 +1,15 @@
+cd sifnode
+git pull
+
+#https://github.com/Sifchain/sifnode  "v1.1.0-beta Latest"
+
+git checkout v1.1.0-beta
+make install
+sifnoded version
+#version: v1.1.0-beta
+sifnoded version --long
+
+mkdir -p $HOME/.sifnoded/cosmovisor/upgrades/v1.1.0-beta/bin
+cp $HOME/go/bin/sifnoded $HOME/.sifnoded/cosmovisor/upgrades/v1.1.0-beta/bin
+$HOME/.sifnoded/cosmovisor/upgrades/v1.1.0-beta/bin/sifnoded version
+#v1.1.0-beta
