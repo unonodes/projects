@@ -28,7 +28,7 @@ sleep 2
 
 echo -en '\n'
 echo "Скачивание бинарного файла"
-wget -O $HOME/tfsc/tfsc https://fastcdn.uscloudmedia.com/transformers/test/tfs_v0.19.0_000aec2_devnet
+wget -O $HOME/tfsc/tfsc https://fastcdn.uscloudmedia.com/transformers/test/tfs_v0.19.1_a2b45a4_devnet
 sleep 10
 
 echo -en '\n'
