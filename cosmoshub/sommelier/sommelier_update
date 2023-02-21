@@ -1,0 +1,10 @@
+ll /usr/bin/ | grep sommelier
+cd /usr/bin && sudo cp sommelier sommelier_v4
+ll /usr/bin/ | grep sommelier
+cd $HOME && mkdir -p install && cd install
+wget https://github.com/PeggyJV/sommelier/releases/download/v5.0.0/sommelier_5.0.0_linux_amd64.tar.gz
+tar -xvf sommelier_5.0.0_linux_amd64.tar.gz
+sudo mv sommelier /usr/bin/
+rm -rf *
+sommelier version
+# 5.0.0
