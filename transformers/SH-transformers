@@ -32,6 +32,14 @@
     echo "------------------------"
 }
 
+#Функция 99
+    function script99() {
+#1 Вернуться к списку NOD 
+    bash <(curl -s https://raw.githubusercontent.com/unonodes/projects/main/list)
+    echo "Выполнен скрипт 99"
+}
+
+
 # функция для вывода меню
 function menu() {
     clear
@@ -43,6 +51,7 @@ function menu() {
     echo "3. Проверка запущенных сессий Tmux"
     echo "4. Проверка статуса службы tfsc.service"
     echo "9. Выйти"
+    echo "99. Список nodes"
 }
 
 # цикл вывода меню и обработки ввода пользователя
@@ -70,6 +79,10 @@ do
         9)
             exit 0
             ;;
+        99)
+            script99
+            read -p "Нажмите ENTER для продолжения..."
+            ;;  
         *)
             echo "Неверная опция. Попробуйте еще раз."
             read -p "Нажмите ENTER для продолжения..."
