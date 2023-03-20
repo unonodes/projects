@@ -1,0 +1,37 @@
+#!/bin/bash
+
+#Функция 1
+    function script1() {
+#1 Открыть Transformers 
+    bash <(curl -s https://raw.githubusercontent.com/unonodes/projects/main/transformers/SH-transformers)
+    echo "Выполнен скрипт 1"
+}
+
+
+# функция для вывода меню
+function menu() {
+    clear
+    echo "Меню:"
+    echo "1. Transformers"
+    echo "9. Выйти"
+}
+
+# цикл вывода меню и обработки ввода пользователя
+while true
+do
+    menu
+    read -p "Выберите опцию: " option
+    case $option in
+        1)
+            script1
+            read -p "Нажмите ENTER для продолжения..."
+            ;;
+        9)
+            exit 0
+            ;;
+        *)
+            echo "Неверная опция. Попробуйте еще раз."
+            read -p "Нажмите ENTER для продолжения..."
+            ;;
+    esac
+done
