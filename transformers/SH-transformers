@@ -32,6 +32,15 @@
     echo "------------------------"
 }
 
+#Функция 5
+    function script5() {
+#4 Logs tfsc.service
+    echo "Logs tfsc.service"
+    echo "------------------------"
+    echo " $(sudo journalctl -n 50 -f -u tfsc.service) "
+    echo "------------------------"
+}
+
 #Функция 99
     function script99() {
 #1 Вернуться к списку NOD 
@@ -71,11 +80,15 @@ do
         3)
             script3
             read -p "Нажмите ENTER для продолжения..."
-            ;; 
+            ;;
         4)
             script4
             read -p "Нажмите ENTER для продолжения..."
-            ;; 
+            ;;
+        4)
+            script5
+            read -p "Нажмите ENTER для продолжения..."
+            ;;            
         9)
             exit 0
             ;;
