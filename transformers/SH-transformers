@@ -23,15 +23,26 @@
     echo "------------------------"
 }
 
+#Функция 4
+    function script4() {
+#4 Проверка статуса службы tfsc.service
+    echo "Статуса службы tfsc.service"
+    echo "------------------------"
+    echo " $(sudo systemctl status tfsc.service) "
+    echo "------------------------"
+}
+
 # функция для вывода меню
 function menu() {
     clear
     echo "Меню:"
     echo "1. Открыть CLI Transformers"
     echo "2. Закрыть CLI и запустить servise_file Transformers"
+    echo " "
     echo "Дополнительные функции:"
     echo "3. Проверка запущенных сессий Tmux"
-    echo "4. Выйти"
+    echo "4. Проверка статуса службы tfsc.service"
+    echo "9. Выйти"
 }
 
 # цикл вывода меню и обработки ввода пользователя
@@ -53,6 +64,10 @@ do
             read -p "Нажмите ENTER для продолжения..."
             ;; 
         4)
+            script4
+            read -p "Нажмите ENTER для продолжения..."
+            ;; 
+        9)
             exit 0
             ;;
         *)
