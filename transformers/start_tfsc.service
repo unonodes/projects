@@ -1,5 +1,10 @@
-#!/usr/bin/bash
+#!/usr/bin/bash 
+echo $(tmux kill-session -t tfsc)
+echo $(tmux ls)
+sleep 5
+
 sudo systemctl start tfsc.service
 sudo systemctl status tfsc.service
 sleep 5
+
 sudo journalctl -n 100 -f -u tfsc.service
